@@ -43,7 +43,7 @@
 }
 
 -(void)scrollViewDidScroll:(nonnull UIScrollView *)scrollView{
-    [maskView scrollViewDidScroll:scrollView];
+    [maskView contentOffset:scrollView.contentOffset];
 }
 
 - (void)didReceiveMemoryWarning {

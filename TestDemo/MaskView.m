@@ -20,21 +20,22 @@
         imageView2.image = [UIImage imageNamed:@"channel_selected_bottom_bg"];
         [self addSubview:imageView2];
       
-        [self scrollViewDidScroll:nil];
+        [self contentOffset:CGPointZero];
       
+        
         
     }
     return self;
 }
 
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+- (void)contentOffset:(CGPoint)contentOffset{
     [imageView removeFromSuperview];
     imageView.image = [UIImage imageNamed:@"channel_normal_bottom_bg"];
     [self addSubview:imageView];
 
     
     CGRect frame = imageView2.frame;
-    frame.origin.x = scrollView.contentOffset.x;
+    frame.origin.x = contentOffset.x;
     imageView2.frame = frame;
     
     // 覆盖图片部分 整成透明

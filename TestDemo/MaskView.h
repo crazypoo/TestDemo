@@ -13,7 +13,7 @@
     UIImageView *imageView2;
 }
 
-- (void)scrollViewDidScroll:(nonnull UIScrollView *)scrollView;
+- (void)contentOffset:(CGPoint)contentOffset;
 
 
 @end
